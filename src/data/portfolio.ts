@@ -1,7 +1,7 @@
 export const profile = {
   name: "Mohammed Bishir K",
   shortName: "Bishir",
-  title: "Fullstack Developer",
+  title: "Software Engineer | Frontend Development",
   email: "mohammedbishirk@gmail.com",
   phone: "+91 8593067862",
   location: "Kerala, India",
@@ -9,7 +9,8 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/mohammed-bishir-k-80843b330",
   linktree: "https://linktr.ee/Mohammed_bishir",
   summary:
-    "Full-stack developer with 4 years building scalable, maintainable web applications. Skilled in React.js and TypeScript, with experience improving UI/UX and driving performance optimization. Strong problem-solving approach to deliver clean, scalable code from design to deployment.",
+    "Front-end Developer with 4+ years building responsive, scalable web applications using JavaScript and TypeScript. Focused on performance optimization, maintainable component architectures, and collaborating with designers to deliver production-ready UIs.",
+  languages: ["English (Fluent)", "Malayalam (Native)"],
 };
 
 export type Project = {
@@ -23,77 +24,13 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "SGMB — Sharjah Government Events Platform",
+    title: "Stavoya — Multi-Tenant Room Booking Platform",
     description:
-      "Event-based project for Sharjah Government with dynamic, responsive React interfaces and accessibility-focused delivery.",
+      "Scalable multi-tenant room booking platform with 5 modules and role-based dashboards, focused on responsive design, performance, SSR for SEO, and robust RBAC.",
     highlights: [
-      "Designed and implemented dynamic, responsive user interfaces using React",
-      "Integrated reusable components for consistency across the platform",
-      "Collaborated with backend teams to fetch and display real-time event data",
-      "Ensured cross-browser compatibility and performance for high-traffic usage",
-      "Followed strict accessibility guidelines to meet government standards",
-    ],
-    tags: ["React", "JavaScript"],
-  },
-  {
-    title: "SGMB-CMS — Sharjah Government CMS",
-    description:
-      "Content management system for Sharjah Government events and content updates, with dashboards and role-based access.",
-    highlights: [
-      "Developed and maintained a robust CMS using React",
-      "Built user-friendly dashboards and admin tools for content workflows",
-      "Implemented secure authentication and role-based access control",
-      "Collaborated with SGMB frontend and backend teams for content sync",
-    ],
-    tags: ["React", "JavaScript", "CMS", "RBAC"],
-  },
-  {
-    title: "SAFTA — Agri-food Digital Platform (Saudi Arabia)",
-    description:
-      "Agri-food digital platform for Saudi Arabia with scalable React/TypeScript interfaces and real-time data fetching.",
-    highlights: [
-      "Designed scalable, user-friendly interfaces with React and TypeScript",
-      "Implemented RTK Query for real-time data fetching and caching",
-      "Styled with Material-UI for a modern, consistent design",
-      "Optimized for high performance and responsiveness across devices",
-    ],
-    tags: ["React", "TypeScript", "RTK Query", "Material-UI"],
-  },
-  {
-    title: "SAFTA-CMS — Platform CMS & APIs",
-    description:
-      "Backend CMS infrastructure for SAFTA: Node.js APIs, PostgreSQL, Knex.js, and secure content operations.",
-    highlights: [
-      "Built backend with Node.js and Express.js for scalable architecture",
-      "Designed PostgreSQL schemas and optimized queries for integrity",
-      "Implemented Knex.js for query building and migrations",
-      "Built secure REST APIs for news, events, and media uploads",
-      "Integrated role-based access control and authentication",
-    ],
-    tags: ["Node.js", "Express.js", "PostgreSQL", "Knex.js"],
-  },
-  {
-    title: "AITIQS — Ticketing System Platform",
-    description:
-      "Ticketing system platform with dynamic Next.js UI, Tailwind layouts, and RTK Query data flow.",
-    highlights: [
-      "Built interactive UI components with Next.js and TypeScript",
-      "Designed responsive layouts with Tailwind CSS",
-      "Managed API interactions and state with RTK Query",
-    ],
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "RTK Query"],
-  },
-  {
-    title: "Zapbed (Stavoya) — Room Booking Platform",
-    description:
-      "Multi-tenant room booking platform with Super Admin, Admin/Tenant, Agent, and User portals.",
-    highlights: [
-      "Built 5 role-based modules serving different access levels",
-      "Next.js SSR user portal for SEO and faster page loads",
-      "React TypeScript dashboards with RBAC and complex data management",
-      "Integrated Node.js REST APIs for auth, booking, and payments",
-      "Redux / Context API state management across booking flows",
-      "Reusable component libraries for consistency across modules",
+      "Collaborated with UI/UX designers to implement pixel-perfect UIs",
+      "Enforced code quality, testing, and documentation practices",
+      "Integrated RESTful APIs for authentication, booking workflows, payments, and real-time availability",
     ],
     tags: [
       "Next.js",
@@ -101,8 +38,59 @@ export const projects: Project[] = [
       "TypeScript",
       "Node.js",
       "Redux",
-      "Tailwind CSS",
+      "Context API",
+      "Tailwind",
     ],
+  },
+  {
+    title: "SGMB — Event-Based Platform for Sharjah Government",
+    description:
+      "Responsive and accessible event management interfaces following HTML5 semantics and government accessibility standards.",
+    highlights: [
+      "Built reusable UI components and integrated backend APIs",
+      "Collaborated with designers to ensure cross-browser compatibility and performance",
+    ],
+    tags: ["React", "JavaScript"],
+  },
+  {
+    title: "SGMB-CMS — Content Management System for Sharjah Government",
+    description:
+      "React-based CMS with administrative dashboards, authentication, and RBAC for secure content workflows.",
+    highlights: [
+      "Integrated frontend and backend services to support secure content operations",
+      "Aligned implementation with traditional CMS requirements and documentation practices",
+    ],
+    tags: ["React", "JavaScript"],
+  },
+  {
+    title: "SAFTA — Agri-Food Digital Platform for Saudi Arabia",
+    description:
+      "Scalable frontend interfaces with RTK Query and Material UI, focused on caching, API integration, responsive design, and performance.",
+    highlights: [
+      "Delivered interfaces meeting business requirements and testing standards",
+      "Used RTK Query for efficient data fetching and caching",
+    ],
+    tags: ["React", "TypeScript", "RTK Query", "Material-UI"],
+  },
+  {
+    title: "SAFTA-CMS — Content Management System for SAFTA website",
+    description:
+      "Backend services and RESTful APIs with Node.js and Express.js supporting CMS content operations.",
+    highlights: [
+      "Designed PostgreSQL schemas with Knex.js",
+      "Applied validation, error handling, and role-based access control",
+    ],
+    tags: ["Node.js", "Express.js", "PostgreSQL", "Knex.js"],
+  },
+  {
+    title: "AITIQS — Ticketing System Platform",
+    description:
+      "Interactive UI with Next.js and TypeScript, responsive layouts, and real-time updates via RTK Query.",
+    highlights: [
+      "Built interactive UI components with Next.js and TypeScript",
+      "Optimized developer builds and tooling using Vite",
+    ],
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "RTK Query"],
   },
 ];
 
@@ -115,18 +103,18 @@ export type Experience = {
 
 export const experience: Experience[] = [
   {
-    role: "Software Developer",
+    role: "Software Engineer",
     company: "Zoftcares Technologies",
-    period: "Jul 2022 — Dec 2024",
+    period: "Jul 2022 — Present",
     points: [
-      "Led development of user-friendly, responsive web applications using modern frameworks and TypeScript",
-      "Collaborated with UX/UI designers to deliver pixel-perfect interfaces and improve UI/UX across products",
-      "Implemented performance optimization strategies to reduce load times and improve responsiveness",
-      "Integrated RTK Query and Redux Toolkit to centralize state and streamline API interactions",
-      "Developed reusable component libraries to standardize the codebase and enable scalable reuse",
-      "Collaborated with backend, product, and QA teams, leveraging CI/CD pipelines and Git for deployments",
-      "Maintained high code quality through clean code, rigorous reviews, and modular design principles",
-      "Deployed and managed web applications on Linux servers, supporting REST APIs for frontend integrations",
+      "Led frontend development for a multi-tenant room-booking platform with 5 major modules, delivering role-based portals for User, Agent, Admin/Tenant, and Super Admin and improving feature delivery velocity across teams.",
+      "Built responsive, accessible, pixel-perfect interfaces from UX/UI designs, collaborating directly with designers to bridge design and implementation and maintain cross-browser compatibility.",
+      "Implemented scalable component architecture and modular React/Next.js components, reducing duplication and improving maintainability across the codebase.",
+      "Integrated RESTful APIs and collaborated with backend engineers to deliver authentication, booking workflows, payment processing, and real-time availability with predictable data flows.",
+      "Implemented state management and API caching for complex workflows using Redux Toolkit, RTK Query, React Query, and Context API to improve data consistency and reduce API requests.",
+      "Improved application performance and page speed through frontend performance optimization techniques, server-side rendering for SEO, and targeted rendering optimizations; supported fast load times across devices.",
+      "Participated in peer code reviews and enforced code quality, testing, and documentation practices to keep codebase maintainable and production-ready.",
+      "Supported production deployment and maintenance using Git, GitHub, CI/CD pipelines, and Linux servers; optimized build pipeline and developer workflow with Webpack.",
     ],
   },
 ];
@@ -138,44 +126,71 @@ export type SkillGroup = {
 
 export const skillGroups: SkillGroup[] = [
   {
-    label: "Frameworks",
-    items: ["React.js", "Next.js", "Node.js"],
-  },
-  {
-    label: "Programming Languages",
-    items: ["JavaScript", "TypeScript"],
-  },
-  {
-    label: "State Management & Data Fetching",
-    items: ["Redux", "RTK Query", "React Query", "Axios", "Hooks"],
-  },
-  {
-    label: "Frontend Technologies",
+    label: "Frontend",
     items: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "MUI",
-      "Ant Design",
-      "Shadcn UI",
-      "jQuery",
-      "Bootstrap",
+      "React.js",
+      "Next.js",
+      "TypeScript",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
       "Angular",
     ],
   },
   {
-    label: "Database",
+    label: "State Management & Data Fetching",
+    items: [
+      "Redux Toolkit",
+      "RTK Query",
+      "React Query",
+      "Context API",
+      "React Hooks",
+      "Axios",
+    ],
+  },
+  {
+    label: "UI & Styling",
+    items: [
+      "Material UI (MUI)",
+      "Ant Design",
+      "Shadcn UI",
+      "Tailwind CSS",
+      "Bootstrap",
+      "jQuery",
+    ],
+  },
+  {
+    label: "Backend & APIs",
+    items: ["Node.js", "Express.js", "RESTful APIs"],
+  },
+  {
+    label: "Databases",
     items: ["PostgreSQL", "MySQL", "MongoDB"],
   },
   {
-    label: "Cloud & Version Control",
-    items: ["AWS", "Git", "GitHub"],
+    label: "Tools & Build",
+    items: ["Git", "GitHub", "Webpack", "Vite"],
+  },
+  {
+    label: "Cloud & DevOps",
+    items: ["AWS", "Linux", "CI/CD"],
+  },
+  {
+    label: "CMS & Practices",
+    items: [
+      "Traditional CMS",
+      "Code quality",
+      "Testing",
+      "Documentation",
+      "UI/UX collaboration",
+      "HTML5 semantics",
+    ],
   },
 ];
 
 export const education = {
   degree: "B.Sc, Computer Science",
-  period: "Jan 2018 — Jan 2021",
+  period: "Apr 2019 — Apr 2022",
   college: "Calicut University",
-  university: "Malappuram, Kerala, India",
+  university: "Malappuram, Kerala",
 };

@@ -61,6 +61,10 @@ export function AboutSection() {
             <p>{education.period} · {education.college}</p>
             <p>{education.university}</p>
           </div>
+          <div className="mt-4 font-medium">Languages</div>
+          <p className="mt-2 text-sm leading-6 text-secondary">
+            {profile.languages.join(", ")}
+          </p>
         </motion.div>
       </div>
     </SectionShell>
