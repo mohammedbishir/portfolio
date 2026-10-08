@@ -10,7 +10,7 @@ export function ProjectsSection() {
     <SectionShell
       id="projects"
       title="Projects"
-      subtitle="Major platforms I've built across government, agri-food, ticketing, and booking."
+      subtitle="Major platforms I've built across certificates, education, government, agri-food, ticketing, and booking."
     >
       <motion.div
         variants={staggerContainer}
@@ -26,7 +26,19 @@ export function ProjectsSection() {
             whileHover={{ y: -3, transition: { duration: 0.2 } }}
             className="group rounded-2xl border border-border/80 bg-card/60 p-5 backdrop-blur"
           >
-            <h3 className="text-lg font-semibold tracking-tight">{p.title}</h3>
+            <div className="flex flex-wrap items-start justify-between gap-3">
+              <h3 className="text-lg font-semibold tracking-tight">{p.title}</h3>
+              {p.href ? (
+                <a
+                  href={p.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="shrink-0 text-sm font-medium text-primary underline-offset-4 hover:underline"
+                >
+                  View demo
+                </a>
+              ) : null}
+            </div>
             <p className="mt-2 text-sm leading-6 text-secondary">{p.description}</p>
             <ul className="mt-3 space-y-1.5 text-sm leading-6 text-secondary">
               {p.highlights.slice(0, 3).map((h) => (

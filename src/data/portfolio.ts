@@ -24,6 +24,46 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "CertiFlow — Digital Certificate Platform",
+    description:
+      "Full-stack multi-tenant certificate platform for workshops and school sports meets, focused on visual template design, PDF issuance, QR verification, and a clean admin experience deployed on Vercel, Render, and Neon.",
+    highlights: [
+      "Built organization signup, JWT auth, and role-based admin dashboards for events, templates, and certificates",
+      "Designed a WYSIWYG certificate designer with PDF generation, plus workshop and sports-meet place certificates (1st / 2nd / 3rd, including ties)",
+      "Integrated REST APIs for registration, CSV import, revoke/restore, and public QR verification; shipped a pnpm monorepo to production",
+    ],
+    tags: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "NestJS",
+      "Prisma",
+      "PostgreSQL",
+      "Tailwind",
+    ],
+  },
+  {
+    title: "English Bell — Institute Management System",
+    description:
+      "Full-stack management platform for a spoken English institute, covering the whole student journey from first enquiry to admission, fees and reports, with separate Super Admin, Admin and Reception portals, deployed on Vercel, Render and Neon.",
+    highlights: [
+      "Built JWT authentication with rotating httpOnly refresh cookies, server-side session revocation, rate-limited login and role-based dashboards for three staff portals, with a full audit log of every change",
+      "Designed modules for enquiries and follow-ups, admissions, courses and batches, fee plans with PDF receipts, refunds and reminders, plus staff payroll, leave and expense tracking",
+      "Integrated REST APIs for CSV student import with preview and validation, student photo and document uploads, enquiry and finance reports with CSV export, and one-click database backup and restore; shipped a pnpm monorepo to production",
+    ],
+    tags: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "NestJS",
+      "Prisma",
+      "PostgreSQL",
+      "Tailwind",
+      "TanStack Query",
+    ],
+    href: "https://english-bell.vercel.app/demo",
+  },
+  {
     title: "Stavoya — Multi-Tenant Room Booking Platform",
     description:
       "Scalable multi-tenant room booking platform with 5 modules and role-based dashboards, focused on responsive design, performance, SSR for SEO, and robust RBAC.",
