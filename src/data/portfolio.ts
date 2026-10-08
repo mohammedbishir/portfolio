@@ -41,6 +41,7 @@ export const projects: Project[] = [
       "PostgreSQL",
       "Tailwind",
     ],
+    href: "https://certiflow-web-beta.vercel.app/demo",
   },
   {
     title: "English Bell — Institute Management System",
