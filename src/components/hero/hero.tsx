@@ -51,8 +51,8 @@ export function Hero() {
             transition={{ duration: 0.55, delay: 0.7, ease }}
             className="max-w-md text-pretty text-base leading-7 text-secondary sm:text-lg"
           >
-            Building scalable web apps with React, Next.js, and Node — clean
-            interfaces, strong performance, maintainable code.
+            Full Stack Developer building React/Next.js frontends and
+            Node.js/NestJS backends — 4+ years shipping production platforms.
           </motion.p>
 
           <motion.div

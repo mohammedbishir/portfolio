@@ -10,7 +10,7 @@ export function ProjectsSection() {
     <SectionShell
       id="projects"
       title="Projects"
-      subtitle="Major platforms I've built across certificates, education, government, agri-food, ticketing, and booking."
+      subtitle="Full-stack platforms across certificates, education, booking, government, agri-food, and ticketing."
     >
       <motion.div
         variants={staggerContainer}

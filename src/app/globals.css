@@ -99,3 +99,34 @@ body {
 * {
   scroll-behavior: auto;
 }
+
+/* Resume print: document only, no website chrome */
+@media print {
+  @page {
+    margin: 12mm;
+    size: A4;
+  }
+
+  body {
+    background: white !important;
+    color: #1f2937 !important;
+  }
+
+  header,
+  nav,
+  footer,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  .resume-sheet {
+    max-width: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+}
+
+/* Keep resume sheet readable in dark mode preview */
+.dark .resume-sheet {
+  color-scheme: light;
+}

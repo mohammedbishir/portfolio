@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "preview": "npx --yes serve out",
+    "generate:pdfs": "node scripts/generate-pdfs.mjs",
     "lint": "eslint"
   },
   "dependencies": {
@@ -21,10 +22,12 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/pdfkit": "^0.17.6",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
+    "pdfkit": "^0.20.2",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

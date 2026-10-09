@@ -4,8 +4,10 @@ import { Hero } from "@/components/hero/hero";
 import {
   AboutSection,
   ContactSection,
+  CoverLetterSection,
   ExperienceSection,
   ProjectsSection,
+  ResumeSection,
   SkillsSection,
 } from "@/components/sections";
 
@@ -18,6 +20,8 @@ export default function Home() {
       <ExperienceSection />
       <ProjectsSection />
       <SkillsSection />
+      <ResumeSection />
+      <CoverLetterSection />
       <ContactSection />
       <Footer />
     </>

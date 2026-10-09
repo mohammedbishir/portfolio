@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mohammed Bishir K | Fullstack Developer",
+  title: "Mohammed Bishir K | Full Stack Developer",
   description:
-    "Portfolio of Mohammed Bishir K — fullstack developer specializing in React, Next.js, and Node.js.",
+    "Portfolio of Mohammed Bishir K — Full Stack Developer specializing in React, Next.js, Node.js, NestJS, and PostgreSQL.",
 };
 
 export default function RootLayout({

@@ -1,7 +1,9 @@
 export const profile = {
   name: "Mohammed Bishir K",
   shortName: "Bishir",
-  title: "Software Engineer | Frontend Development",
+  title: "Full Stack Developer",
+  headline:
+    "React.js · Next.js · TypeScript · Node.js · NestJS · PostgreSQL",
   email: "mohammedbishirk@gmail.com",
   phone: "+91 8593067862",
   location: "Kerala, India",
@@ -9,8 +11,10 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/mohammed-bishir-k-80843b330",
   linktree: "https://linktr.ee/Mohammed_bishir",
   summary:
-    "Front-end Developer with 4+ years building responsive, scalable web applications using JavaScript and TypeScript. Focused on performance optimization, maintainable component architectures, and collaborating with designers to deliver production-ready UIs.",
+    "Full Stack Developer with 4+ years building end-to-end web products — from responsive React/Next.js interfaces to Node.js, NestJS, and PostgreSQL backends. Led development on a multi-tenant enterprise platform with 5 modules and 4 role-based portals, and shipped production systems with JWT auth, REST APIs, RBAC, testing, and CI/CD on Vercel, Render, and Neon.",
   languages: ["English (Fluent)", "Malayalam (Native)"],
+  resumePdf: "/Mohammed_Bishir_Full_Stack_Developer.pdf",
+  coverLetterPdf: "/Mohammed_Bishir_Cover_Letter.pdf",
 };
 
 export type Project = {
@@ -67,71 +71,66 @@ export const projects: Project[] = [
   {
     title: "Stavoya — Multi-Tenant Room Booking Platform",
     description:
-      "Scalable multi-tenant room booking platform with 5 modules and role-based dashboards, focused on responsive design, performance, SSR for SEO, and robust RBAC.",
+      "Multi-tenant room booking platform with reusable interfaces and RBAC-driven dashboards across 5 modules, SSR for the customer portal, and REST integrations for auth, bookings, payments, and real-time availability.",
     highlights: [
-      "Collaborated with UI/UX designers to implement pixel-perfect UIs",
-      "Enforced code quality, testing, and documentation practices",
-      "Integrated RESTful APIs for authentication, booking workflows, payments, and real-time availability",
+      "Built reusable interfaces and RBAC-driven dashboards across 5 modules",
+      "Implemented SSR for the customer portal",
+      "Integrated REST APIs for authentication, bookings, payments, and real-time availability",
     ],
-    tags: [
-      "Next.js",
-      "React",
-      "TypeScript",
-      "Node.js",
-      "Redux",
-      "Context API",
-      "Tailwind",
-    ],
-  },
-  {
-    title: "SGMB — Event-Based Platform for Sharjah Government",
-    description:
-      "Responsive and accessible event management interfaces following HTML5 semantics and government accessibility standards.",
-    highlights: [
-      "Built reusable UI components and integrated backend APIs",
-      "Collaborated with designers to ensure cross-browser compatibility and performance",
-    ],
-    tags: ["React", "JavaScript"],
-  },
-  {
-    title: "SGMB-CMS — Content Management System for Sharjah Government",
-    description:
-      "React-based CMS with administrative dashboards, authentication, and RBAC for secure content workflows.",
-    highlights: [
-      "Integrated frontend and backend services to support secure content operations",
-      "Aligned implementation with traditional CMS requirements and documentation practices",
-    ],
-    tags: ["React", "JavaScript"],
-  },
-  {
-    title: "SAFTA — Agri-Food Digital Platform for Saudi Arabia",
-    description:
-      "Scalable frontend interfaces with RTK Query and Material UI, focused on caching, API integration, responsive design, and performance.",
-    highlights: [
-      "Delivered interfaces meeting business requirements and testing standards",
-      "Used RTK Query for efficient data fetching and caching",
-    ],
-    tags: ["React", "TypeScript", "RTK Query", "Material-UI"],
-  },
-  {
-    title: "SAFTA-CMS — Content Management System for SAFTA website",
-    description:
-      "Backend services and RESTful APIs with Node.js and Express.js supporting CMS content operations.",
-    highlights: [
-      "Designed PostgreSQL schemas with Knex.js",
-      "Applied validation, error handling, and role-based access control",
-    ],
-    tags: ["Node.js", "Express.js", "PostgreSQL", "Knex.js"],
+    tags: ["Next.js", "React", "TypeScript", "Redux", "Context API", "Tailwind"],
   },
   {
     title: "AITIQS — Ticketing System Platform",
     description:
-      "Interactive UI with Next.js and TypeScript, responsive layouts, and real-time updates via RTK Query.",
+      "Ticketing system with dynamic interactive UI components, responsive layouts, and RTK Query for real-time updates and streamlined data flow.",
     highlights: [
-      "Built interactive UI components with Next.js and TypeScript",
-      "Optimized developer builds and tooling using Vite",
+      "Built dynamic, interactive UI components and responsive layouts",
+      "Used RTK Query for real-time updates and streamlined data flow",
     ],
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "RTK Query"],
+  },
+  {
+    title: "SAFTA — Agri-Food Digital Platform, Saudi Arabia",
+    description:
+      "Scalable, responsive agri-food interfaces with RTK Query for API integration, caching, and data synchronization, and Material UI for a reusable component system.",
+    highlights: [
+      "Developed scalable, responsive interfaces with React and TypeScript",
+      "Used RTK Query for API integration, caching, and data synchronization",
+      "Built a reusable component system with Material UI",
+    ],
+    tags: ["React", "TypeScript", "RTK Query", "Material UI"],
+  },
+  {
+    title: "SGMB-CMS — Content Management System, Sharjah Government",
+    description:
+      "Administrative dashboards and content workflows with authentication and role-based access control, integrating frontend and backend services.",
+    highlights: [
+      "Built administrative dashboards and content workflows",
+      "Implemented authentication and role-based access control",
+      "Integrated frontend and backend services",
+    ],
+    tags: ["React", "JavaScript"],
+  },
+  {
+    title: "SGMB — Event Platform, Sharjah Government",
+    description:
+      "Responsive, accessible event interfaces with reusable components, optimized for cross-browser compatibility and performance.",
+    highlights: [
+      "Developed responsive, accessible event interfaces",
+      "Built reusable components for consistency",
+      "Optimized for cross-browser compatibility and performance",
+    ],
+    tags: ["React", "JavaScript"],
+  },
+  {
+    title: "SAFTA-CMS — Backend for SAFTA Website",
+    description:
+      "REST APIs with authentication, RBAC, validation and error handling, plus PostgreSQL schema design and Knex.js migrations.",
+    highlights: [
+      "Built REST APIs with authentication, RBAC, validation, and error handling",
+      "Designed PostgreSQL schemas and Knex.js migrations",
+    ],
+    tags: ["Node.js", "Express.js", "PostgreSQL", "Knex.js"],
   },
 ];
 
@@ -148,14 +147,13 @@ export const experience: Experience[] = [
     company: "Zoftcares Technologies",
     period: "Jul 2022 — Present",
     points: [
-      "Led frontend development for a multi-tenant room-booking platform with 5 major modules, delivering role-based portals for User, Agent, Admin/Tenant, and Super Admin and improving feature delivery velocity across teams.",
-      "Built responsive, accessible, pixel-perfect interfaces from UX/UI designs, collaborating directly with designers to bridge design and implementation and maintain cross-browser compatibility.",
-      "Implemented scalable component architecture and modular React/Next.js components, reducing duplication and improving maintainability across the codebase.",
-      "Integrated RESTful APIs and collaborated with backend engineers to deliver authentication, booking workflows, payment processing, and real-time availability with predictable data flows.",
-      "Implemented state management and API caching for complex workflows using Redux Toolkit, RTK Query, React Query, and Context API to improve data consistency and reduce API requests.",
-      "Improved application performance and page speed through frontend performance optimization techniques, server-side rendering for SEO, and targeted rendering optimizations; supported fast load times across devices.",
-      "Participated in peer code reviews and enforced code quality, testing, and documentation practices to keep codebase maintainable and production-ready.",
-      "Supported production deployment and maintenance using Git, GitHub, CI/CD pipelines, and Linux servers; optimized build pipeline and developer workflow with Webpack.",
+      "Lead full-stack delivery on a multi-tenant enterprise platform (Stavoya) using React.js, Next.js, and TypeScript across 5 modules and 4 role-based portals.",
+      "Build responsive, accessible UIs and reusable component libraries that power dashboards, booking workflows, and admin tools.",
+      "Design and integrate REST APIs for authentication, bookings, payments, and real-time availability with predictable client–server data flows.",
+      "Manage application state with Redux Toolkit, Zustand, Context API, RTK Query, and React Query; improve performance with SSR, code splitting, memoization, and profiling.",
+      "Build backend services with Node.js, Express.js, and NestJS, including PostgreSQL schema design, validation, RBAC, and production API contracts.",
+      "Write unit and integration tests with Jest and React Testing Library, debug production issues, and support deployments with Git, GitHub, and CI/CD workflows.",
+      "Take part in code reviews and Agile/Scrum ceremonies, collaborating across frontend, backend, and stakeholders to ship reliable features.",
     ],
   },
 ];
@@ -167,71 +165,159 @@ export type SkillGroup = {
 
 export const skillGroups: SkillGroup[] = [
   {
-    label: "Frontend",
+    label: "Core Frontend",
     items: [
-      "React.js",
-      "Next.js",
-      "TypeScript",
+      "React JS",
+      "React Hooks",
       "JavaScript (ES6+)",
+      "TypeScript",
       "HTML5",
       "CSS3",
-      "Angular",
+      "Next.js (SSR)",
+      "Responsive web development",
     ],
   },
   {
-    label: "State Management & Data Fetching",
+    label: "State Management & APIs",
     items: [
       "Redux Toolkit",
+      "Redux",
+      "Context API",
+      "Zustand",
       "RTK Query",
       "React Query",
-      "Context API",
-      "React Hooks",
+      "RESTful API integration",
       "Axios",
+      "JWT authentication",
     ],
   },
   {
-    label: "UI & Styling",
+    label: "UI Components",
     items: [
+      "Reusable component libraries",
+      "Component-based architecture",
       "Material UI (MUI)",
       "Ant Design",
       "Shadcn UI",
       "Tailwind CSS",
       "Bootstrap",
-      "jQuery",
     ],
   },
   {
-    label: "Backend & APIs",
-    items: ["Node.js", "Express.js", "RESTful APIs"],
-  },
-  {
-    label: "Databases",
-    items: ["PostgreSQL", "MySQL", "MongoDB"],
-  },
-  {
-    label: "Tools & Build",
-    items: ["Git", "GitHub", "Webpack", "Vite"],
-  },
-  {
-    label: "Cloud & DevOps",
-    items: ["AWS", "Linux", "CI/CD"],
-  },
-  {
-    label: "CMS & Practices",
+    label: "Performance & Quality",
     items: [
-      "Traditional CMS",
-      "Code quality",
-      "Testing",
-      "Documentation",
-      "UI/UX collaboration",
-      "HTML5 semantics",
+      "Web performance optimization",
+      "Profiling",
+      "Memoization",
+      "Code splitting",
+      "Cross-browser compatibility",
+      "Accessibility standards",
+      "Jest",
+      "React Testing Library",
+      "Debugging",
+    ],
+  },
+  {
+    label: "Backend & Databases",
+    items: [
+      "Node.js",
+      "Express.js",
+      "NestJS",
+      "REST API design",
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "RBAC",
+      "Microservices environments",
+    ],
+  },
+  {
+    label: "DevOps & Workflow",
+    items: [
+      "Git",
+      "GitHub",
+      "CI/CD pipelines",
+      "Vite",
+      "Webpack",
+      "AWS",
+      "Vercel",
+      "Render",
+      "Linux",
+      "Agile/Scrum",
     ],
   },
 ];
 
 export const education = {
-  degree: "B.Sc, Computer Science",
+  degree: "Bachelor of Science (B.Sc) in Computer Science",
   period: "Apr 2019 — Apr 2022",
   college: "Calicut University",
   university: "Malappuram, Kerala",
+};
+
+/** Key projects shown on the formal CV — full-stack first. */
+export const resumeProjects = [
+  {
+    title: "CertiFlow – Digital Certificate Platform",
+    stack: "Next.js, React, TypeScript, NestJS, Prisma, PostgreSQL, Tailwind",
+    summary:
+      "Built and shipped a full-stack multi-tenant platform with JWT auth, role-based admin dashboards, a WYSIWYG certificate designer with PDF generation and public QR verification. Delivered as a pnpm monorepo on Vercel, Render and Neon.",
+    href: "https://certiflow-web-beta.vercel.app/demo",
+  },
+  {
+    title: "English Bell – Institute Management System",
+    stack:
+      "Next.js, React, TypeScript, NestJS, Prisma, PostgreSQL, Tailwind, TanStack Query",
+    summary:
+      "Delivered a full-stack institute platform with JWT auth, role-based Super Admin / Admin / Reception portals, enquiry-to-fee workflows, CSV import, reports, and production deploy on Vercel, Render and Neon.",
+    href: "https://english-bell.vercel.app/demo",
+  },
+  {
+    title: "Stavoya – Multi-Tenant Room Booking Platform",
+    stack: "Next.js, React, TypeScript, Redux, Context API, Tailwind, Node.js",
+    summary:
+      "Built reusable interfaces and RBAC-driven dashboards across 5 modules, with SSR for the customer portal and REST integrations for authentication, bookings, payments, and real-time availability.",
+  },
+  {
+    title: "SAFTA-CMS – Backend for SAFTA Website",
+    stack: "Node.js, Express.js, PostgreSQL, Knex.js",
+    summary:
+      "Built REST APIs with authentication, RBAC, validation and error handling, plus PostgreSQL schema design and Knex.js migrations.",
+  },
+  {
+    title: "AITIQS – Ticketing System Platform",
+    stack: "Next.js, TypeScript, Tailwind CSS, RTK Query",
+    summary:
+      "Built dynamic, interactive UI components and responsive layouts; used RTK Query for real-time updates and streamlined data flow.",
+  },
+  {
+    title: "SAFTA – Agri-Food Digital Platform, Saudi Arabia",
+    stack: "React, TypeScript, RTK Query, Material UI",
+    summary:
+      "Developed scalable, responsive interfaces, using RTK Query for API integration, caching and data synchronization and MUI for a reusable component system.",
+  },
+  {
+    title: "SGMB-CMS – Content Management System, Sharjah Government",
+    stack: "React, JavaScript",
+    summary:
+      "Built administrative dashboards and content workflows with authentication and role-based access control, integrating frontend and backend services.",
+  },
+  {
+    title: "SGMB – Event Platform, Sharjah Government",
+    stack: "React, JavaScript",
+    summary:
+      "Developed responsive, accessible event interfaces with reusable components, optimized for cross-browser compatibility and performance.",
+  },
+] as const;
+
+export const coverLetter = {
+  roleFocus: "Full Stack Developer",
+  greeting: "Dear Hiring Manager,",
+  paragraphs: [
+    "I am writing to apply for a Full Stack Developer role. With 4+ years shipping production software across the stack, I build polished React/Next.js frontends and reliable Node.js, NestJS, and PostgreSQL backends — including auth, APIs, databases, and deployment.",
+    "At Zoftcares Technologies, I lead delivery on Stavoya, a multi-tenant platform with 5 modules and 4 role-based portals. That work spans reusable UI architecture, REST API integration, state management with Redux Toolkit and React Query, and backend contributions in Node.js/Express with PostgreSQL.",
+    "I also own full product delivery end to end. CertiFlow and English Bell are production monorepos with JWT auth, RBAC dashboards, NestJS APIs, Prisma/PostgreSQL, and deploys on Vercel, Render, and Neon. I care about quality through testing, code reviews, accessibility, and CI/CD.",
+    "I would welcome the chance to bring that full-stack ownership to your team. Thank you for your time and consideration — I would be glad to discuss how I can contribute.",
+  ],
+  closing: "Sincerely,",
 };

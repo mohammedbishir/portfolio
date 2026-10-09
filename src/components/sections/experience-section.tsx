@@ -10,7 +10,7 @@ export function ExperienceSection() {
     <SectionShell
       id="experience"
       title="Experience"
-      subtitle="Where I've shipped production software and led frontend delivery."
+      subtitle="Where I've shipped production software across frontend and backend."
     >
       <motion.div
         variants={staggerContainer}

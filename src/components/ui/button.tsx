@@ -17,6 +17,7 @@ type ButtonBaseProps = CommonProps &
 type ButtonLinkProps = CommonProps &
   Omit<React.ComponentProps<typeof Link>, "className" | "children"> & {
     href: string;
+    download?: boolean | string;
   };
 
 const variants: Record<NonNullable<CommonProps["variant"]>, string> = {
@@ -49,8 +50,24 @@ export function Button(props: (ButtonBaseProps & { href?: never }) | ButtonLinkP
   );
 
   if ("href" in props) {
+    const linkProps = rest as Omit<ButtonLinkProps, keyof CommonProps>;
+    // Native anchor for file downloads (Next.js Link ignores `download`)
+    if (linkProps.download !== undefined) {
+      const { download, href, ...anchorRest } = linkProps;
+      return (
+        <a
+          href={href}
+          download={download === true ? true : download}
+          className={classes}
+          {...(anchorRest as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
+        >
+          {children}
+        </a>
+      );
+    }
+
     return (
-      <Link {...(rest as Omit<ButtonLinkProps, keyof CommonProps>)} className={classes}>
+      <Link {...linkProps} className={classes}>
         {children}
       </Link>
     );

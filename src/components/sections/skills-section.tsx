@@ -10,7 +10,7 @@ export function SkillsSection() {
     <SectionShell
       id="skills"
       title="Skills"
-      subtitle="Frameworks, languages, and tools from my professional stack."
+      subtitle="Frontend, backend, databases, and DevOps — the full stack I ship with."
     >
       <motion.div
         variants={staggerContainer}

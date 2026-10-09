@@ -10,7 +10,7 @@ export function AboutSection() {
     <SectionShell
       id="about"
       title="About"
-      subtitle="Professional summary from my CV — how I build and ship software."
+      subtitle="Full Stack Developer — I design UI, APIs, databases, and deploys as one product."
     >
       <div className="space-y-6">
         <motion.p
@@ -31,10 +31,10 @@ export function AboutSection() {
           className="grid gap-4 sm:grid-cols-2"
         >
           {[
-            { t: "Frontend craft", d: "React.js, Next.js, and TypeScript with clean, mobile-first UI systems." },
-            { t: "Backend systems", d: "Node.js, Express, PostgreSQL, and MongoDB for scalable APIs and data." },
-            { t: "Delivery mindset", d: "Agile collaboration, reusable components, and maintainable code reviews." },
-            { t: "Deploy & ops", d: "Basic AWS and Linux experience for reliable app deployment." },
+            { t: "Frontend", d: "React JS, Next.js, TypeScript, Redux Toolkit, and accessible component systems." },
+            { t: "Backend", d: "Node.js, Express, NestJS, REST APIs, JWT auth, RBAC, and Prisma/PostgreSQL." },
+            { t: "Quality", d: "Jest, React Testing Library, performance profiling, reviews, and CI/CD pipelines." },
+            { t: "Shipping", d: "GitHub, AWS, Vercel, Render, Neon, and Linux for production delivery." },
           ].map((c) => (
             <motion.div
               key={c.t}
