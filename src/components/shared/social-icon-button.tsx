@@ -5,7 +5,7 @@ import { IconTooltip } from "@/components/shared/icon-tooltip";
 import { cn } from "@/lib/utils";
 
 const iconButtonClass =
-  "inline-flex size-9 items-center justify-center rounded-full border border-border/70 bg-background/40 text-muted-foreground transition-colors hover:border-border hover:bg-muted/70 hover:text-foreground";
+  "inline-flex size-9 items-center justify-center rounded-md border border-border/70 bg-background/40 text-muted-foreground transition-colors hover:border-signal/40 hover:bg-signal-soft hover:text-foreground";
 
 export function SocialIconButton({
   label,

@@ -221,7 +221,7 @@ async function generateResume() {
       .fontSize(8.5)
       .fillColor(MUTED)
       .text(
-        `${profile.email}  |  ${profile.phone}  |  ${profile.location}  |  LinkedIn  |  Portfolio`,
+        `${profile.email}  |  ${profile.phone}  |  ${profile.location}  |  LinkedIn  |  bishir.me`,
         { align: "center" },
       );
 

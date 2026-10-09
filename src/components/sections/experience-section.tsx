@@ -24,7 +24,7 @@ export function ExperienceSection() {
             key={`${job.company}-${job.role}`}
             variants={staggerItem}
             whileHover={{ y: -3, transition: { duration: 0.2 } }}
-            className="rounded-2xl border border-border/80 bg-card/60 p-5 backdrop-blur sm:p-6"
+            className="fx-panel p-5 sm:p-6"
           >
             <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
               <div>
@@ -33,12 +33,14 @@ export function ExperienceSection() {
                 </h3>
                 <p className="text-sm text-secondary">{job.company}</p>
               </div>
-              <p className="text-sm text-secondary">{job.period}</p>
+              <p className="font-mono text-xs tracking-wide text-signal">
+                {job.period}
+              </p>
             </div>
             <ul className="mt-4 space-y-2 text-sm leading-6 text-secondary">
               {job.points.map((point) => (
                 <li key={point} className="flex gap-2">
-                  <span className="mt-2 size-1.5 shrink-0 rounded-full bg-foreground/40" />
+                  <span className="mt-2 size-1.5 shrink-0 bg-signal" />
                   <span>{point}</span>
                 </li>
               ))}

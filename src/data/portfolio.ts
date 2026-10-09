@@ -1,6 +1,8 @@
 export const profile = {
   name: "Mohammed Bishir K",
   shortName: "Bishir",
+  domain: "bishir.me",
+  siteUrl: "https://bishir.me",
   title: "Full Stack Developer",
   headline:
     "React.js · Next.js · TypeScript · Node.js · NestJS · PostgreSQL",

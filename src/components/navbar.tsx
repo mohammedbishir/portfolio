@@ -28,20 +28,20 @@ export function Navbar() {
         <motion.div
           initial={{ y: -18, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.55, ease: [0.2, 0.8, 0.2, 1] }}
-          className="mt-4 flex items-center justify-between rounded-2xl border border-border/80 bg-card/70 px-4 py-3 backdrop-blur-xl"
+          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-4 flex items-center justify-between rounded-xl border border-border/80 bg-card/80 px-4 py-3 backdrop-blur-xl"
         >
           <a href="#top" className="font-semibold tracking-tight">
-            {profile.shortName}
-            <span className="text-muted-foreground">.dev</span>
+            <span className="text-signal">/</span>
+            <span className="font-mono text-sm tracking-tight">{profile.domain}</span>
           </a>
 
-          <nav className="hidden items-center gap-1 md:flex">
+          <nav className="hidden items-center gap-0.5 lg:flex">
             {links.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
-                className="rounded-full px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground"
+                className="rounded-md px-2.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-secondary transition-colors hover:bg-signal-soft hover:text-primary"
               >
                 {l.label}
               </a>
@@ -49,7 +49,7 @@ export function Navbar() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <div className="hidden items-center gap-1.5 sm:flex">
+            <div className="hidden items-center gap-1 sm:flex">
               <SocialIconButton
                 label={isCopied("email") ? "Email copied!" : "Copy email"}
                 onClick={() => copy("email", profile.email)}

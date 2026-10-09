@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight, Check, Copy, Mail, MapPin, Phone } from "lucide-react";
-import { ScrollLetters } from "@/components/shared/animated-text";
 import { Button } from "@/components/ui/button";
 import { profile } from "@/data/portfolio";
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
@@ -14,25 +13,24 @@ export function ContactSection() {
     <section id="contact" className="mx-auto w-full max-w-6xl px-4 sm:px-6">
       <div className="border-t border-border/60 py-14 sm:py-20">
         <motion.div
-          initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
-          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="relative overflow-hidden rounded-[2rem] border border-border/80 bg-gradient-to-br from-card/90 via-card/60 to-muted/40 p-8 backdrop-blur sm:p-12"
+          transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+          className="fx-panel relative overflow-hidden p-8 sm:p-12"
         >
-          <div className="pointer-events-none absolute -right-20 -top-20 size-72 rounded-full bg-indigo-500/[0.06] blur-3xl" />
-          <div className="pointer-events-none absolute -bottom-24 -left-16 size-64 rounded-full bg-violet-500/[0.05] blur-3xl" />
+          <div className="fx-grid pointer-events-none absolute inset-0 opacity-60" />
 
           <div className="relative grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
             <div className="space-y-5">
-              <p className="text-sm font-medium uppercase tracking-[0.2em] text-secondary">
-                <ScrollLetters text="Contact" as="span" />
+              <p className="font-mono text-[11px] tracking-[0.22em] text-signal">
+                07 // CONTACT
               </p>
               <h2 className="max-w-lg text-balance text-3xl font-semibold tracking-tight sm:text-5xl">
-                Let&apos;s build something solid together.
+                Let&apos;s build the next system.
               </h2>
               <p className="max-w-md text-base leading-7 text-secondary">
-                Open to fullstack roles, freelance work, and collaboration.
+                Open to full-stack roles, freelance work, and collaboration.
                 Based in {profile.location} — I usually reply within a day.
               </p>
 
@@ -62,77 +60,62 @@ export function ContactSection() {
             </div>
 
             <div className="space-y-3">
-              <div className="flex items-center gap-4 rounded-2xl border border-border/70 bg-background/30 px-4 py-4">
-                <span className="flex size-10 shrink-0 items-center justify-center rounded-full border border-border/70 bg-background/40">
-                  <Mail className="size-4" />
-                </span>
-                <span className="min-w-0 flex-1">
-                  <span className="block text-xs uppercase tracking-wider text-muted-foreground">
-                    Email
-                  </span>
-                  <span className="mt-0.5 block break-all text-sm font-medium text-foreground sm:text-base">
-                    {profile.email}
-                  </span>
-                </span>
-                <button
-                  type="button"
-                  onClick={() => copy("email", profile.email)}
-                  aria-label={isCopied("email") ? "Email copied" : "Copy email"}
-                  title={isCopied("email") ? "Copied!" : "Copy email"}
-                  className="inline-flex size-9 shrink-0 items-center justify-center rounded-full border border-border/70 bg-background/40 text-muted-foreground transition-colors hover:bg-background/70 hover:text-foreground"
+              {[
+                {
+                  key: "email",
+                  label: "Email",
+                  value: profile.email,
+                  icon: Mail,
+                  copyable: true,
+                },
+                {
+                  key: "phone",
+                  label: "Phone",
+                  value: profile.phone,
+                  icon: Phone,
+                  copyable: true,
+                },
+                {
+                  key: "location",
+                  label: "Location",
+                  value: profile.location,
+                  icon: MapPin,
+                  copyable: false,
+                },
+              ].map((row) => (
+                <div
+                  key={row.key}
+                  className="flex items-center gap-4 rounded-lg border border-border/70 bg-background/40 px-4 py-4"
                 >
-                  {isCopied("email") ? (
-                    <Check className="size-4" />
-                  ) : (
-                    <Copy className="size-4" />
-                  )}
-                </button>
-              </div>
-
-              <div className="flex items-center gap-4 rounded-2xl border border-border/70 bg-background/30 px-4 py-4">
-                <span className="flex size-10 shrink-0 items-center justify-center rounded-full border border-border/70 bg-background/40">
-                  <Phone className="size-4" />
-                </span>
-                <span className="min-w-0 flex-1">
-                  <span className="block text-xs uppercase tracking-wider text-muted-foreground">
-                    Phone
+                  <span className="flex size-10 shrink-0 items-center justify-center rounded-md border border-border/70 bg-signal-soft text-signal">
+                    <row.icon className="size-4" />
                   </span>
-                  <span className="mt-0.5 block text-sm font-medium text-foreground sm:text-base">
-                    {profile.phone}
+                  <span className="min-w-0 flex-1">
+                    <span className="block font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
+                      {row.label}
+                    </span>
+                    <span className="mt-0.5 block break-all text-sm font-medium text-foreground sm:text-base">
+                      {row.value}
+                    </span>
                   </span>
-                </span>
-                <button
-                  type="button"
-                  onClick={() => copy("phone", profile.phone)}
-                  aria-label={
-                    isCopied("phone")
-                      ? "Phone number copied"
-                      : "Copy phone number"
-                  }
-                  title={isCopied("phone") ? "Copied!" : "Copy phone number"}
-                  className="inline-flex size-9 shrink-0 items-center justify-center rounded-full border border-border/70 bg-background/40 text-muted-foreground transition-colors hover:bg-background/70 hover:text-foreground"
-                >
-                  {isCopied("phone") ? (
-                    <Check className="size-4" />
-                  ) : (
-                    <Copy className="size-4" />
-                  )}
-                </button>
-              </div>
-
-              <div className="flex items-center gap-4 rounded-2xl border border-border/70 bg-background/30 px-4 py-4">
-                <span className="flex size-10 shrink-0 items-center justify-center rounded-full border border-border/70 bg-background/40">
-                  <MapPin className="size-4" />
-                </span>
-                <span className="min-w-0 flex-1">
-                  <span className="block text-xs uppercase tracking-wider text-muted-foreground">
-                    Location
-                  </span>
-                  <span className="mt-0.5 block text-sm font-medium text-foreground sm:text-base">
-                    {profile.location}
-                  </span>
-                </span>
-              </div>
+                  {row.copyable ? (
+                    <button
+                      type="button"
+                      onClick={() => copy(row.key, row.value)}
+                      aria-label={
+                        isCopied(row.key) ? `${row.label} copied` : `Copy ${row.label}`
+                      }
+                      className="inline-flex size-9 shrink-0 items-center justify-center rounded-md border border-border/70 bg-background/40 text-muted-foreground transition-colors hover:border-signal/40 hover:text-foreground"
+                    >
+                      {isCopied(row.key) ? (
+                        <Check className="size-4" />
+                      ) : (
+                        <Copy className="size-4" />
+                      )}
+                    </button>
+                  ) : null}
+                </div>
+              ))}
             </div>
           </div>
         </motion.div>
@@ -140,4 +123,3 @@ export function ContactSection() {
     </section>
   );
 }
-

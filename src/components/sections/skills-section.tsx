@@ -21,7 +21,9 @@ export function SkillsSection() {
       >
         {skillGroups.map((group) => (
           <motion.div key={group.label} variants={staggerItem}>
-            <div className="mb-2 text-sm font-medium">{group.label}</div>
+            <div className="mb-2 font-mono text-[10px] tracking-[0.16em] text-signal">
+              {group.label.toUpperCase()}
+            </div>
             <div className="flex flex-wrap gap-2">
               {group.items.map((s, i) => (
                 <motion.span
@@ -31,7 +33,7 @@ export function SkillsSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.35, delay: i * 0.03, ease: [0.25, 0.46, 0.45, 0.94] }}
                   whileHover={{ y: -2, transition: { duration: 0.15 } }}
-                  className="rounded-full border border-border/70 bg-muted/40 px-3 py-2 text-sm text-secondary"
+                  className="rounded-md border border-border/70 bg-signal-soft px-2.5 py-1.5 font-mono text-[11px] tracking-wide text-secondary"
                 >
                   {s}
                 </motion.span>

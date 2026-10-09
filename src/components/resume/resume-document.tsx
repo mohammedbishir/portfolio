@@ -47,8 +47,13 @@ export function ResumeDocument() {
           <span className="text-[#9ca3af]" aria-hidden>
             |
           </span>
-          <a href="/" className="text-[#1e3a5f] underline underline-offset-2">
-            Portfolio
+          <a
+            href={profile.siteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#1e3a5f] underline underline-offset-2"
+          >
+            {profile.domain}
           </a>
         </p>
       </header>

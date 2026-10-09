@@ -19,23 +19,28 @@ export function ProjectsSection() {
         viewport={{ once: true, amount: 0.2 }}
         className="grid gap-4"
       >
-        {projects.map((p) => (
+        {projects.map((p, i) => (
           <motion.article
             key={p.title}
             variants={staggerItem}
-            whileHover={{ y: -3, transition: { duration: 0.2 } }}
-            className="group rounded-2xl border border-border/80 bg-card/60 p-5 backdrop-blur"
+            whileHover={{ y: -2, transition: { duration: 0.2 } }}
+            className="fx-panel group p-5"
           >
             <div className="flex flex-wrap items-start justify-between gap-3">
-              <h3 className="text-lg font-semibold tracking-tight">{p.title}</h3>
+              <div className="space-y-1">
+                <p className="font-mono text-[10px] tracking-[0.18em] text-signal">
+                  PRJ-{String(i + 1).padStart(2, "0")}
+                </p>
+                <h3 className="text-lg font-semibold tracking-tight">{p.title}</h3>
+              </div>
               {p.href ? (
                 <a
                   href={p.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="shrink-0 text-sm font-medium text-primary underline-offset-4 hover:underline"
+                  className="shrink-0 font-mono text-xs tracking-wide text-signal underline-offset-4 hover:underline"
                 >
-                  View demo
+                  DEMO →
                 </a>
               ) : null}
             </div>
@@ -43,16 +48,16 @@ export function ProjectsSection() {
             <ul className="mt-3 space-y-1.5 text-sm leading-6 text-secondary">
               {p.highlights.slice(0, 3).map((h) => (
                 <li key={h} className="flex gap-2">
-                  <span className="mt-2 size-1.5 shrink-0 rounded-full bg-foreground/40" />
+                  <span className="mt-2 size-1.5 shrink-0 bg-signal" />
                   <span>{h}</span>
                 </li>
               ))}
             </ul>
-            <div className="mt-3 flex flex-wrap gap-2">
+            <div className="mt-4 flex flex-wrap gap-2">
               {p.tags.map((t) => (
                 <span
                   key={t}
-                  className="rounded-full border border-border/70 bg-muted/40 px-2.5 py-1 text-xs text-secondary"
+                  className="rounded-md border border-border/70 bg-signal-soft px-2 py-1 font-mono text-[10px] tracking-wide text-secondary"
                 >
                   {t}
                 </span>

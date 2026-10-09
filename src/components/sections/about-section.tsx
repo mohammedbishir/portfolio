@@ -40,9 +40,11 @@ export function AboutSection() {
               key={c.t}
               variants={staggerItem}
               whileHover={{ y: -3, transition: { duration: 0.2 } }}
-              className="rounded-2xl border border-border/80 bg-card/60 p-5 backdrop-blur"
+              className="fx-panel p-5"
             >
-              <div className="font-medium">{c.t}</div>
+              <div className="font-mono text-[10px] tracking-[0.16em] text-signal">
+                {c.t.toUpperCase()}
+              </div>
               <div className="mt-2 text-sm leading-6 text-secondary">{c.d}</div>
             </motion.div>
           ))}
@@ -53,15 +55,19 @@ export function AboutSection() {
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.55, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="rounded-2xl border border-border/80 bg-card/60 p-5 backdrop-blur"
+          className="fx-panel p-5"
         >
-          <div className="font-medium">Education</div>
+          <div className="font-mono text-[10px] tracking-[0.16em] text-signal">
+            EDUCATION
+          </div>
           <div className="mt-2 text-sm leading-6 text-secondary">
             <p className="text-primary">{education.degree}</p>
             <p>{education.period} · {education.college}</p>
             <p>{education.university}</p>
           </div>
-          <div className="mt-4 font-medium">Languages</div>
+          <div className="mt-4 font-mono text-[10px] tracking-[0.16em] text-signal">
+            LANGUAGES
+          </div>
           <p className="mt-2 text-sm leading-6 text-secondary">
             {profile.languages.join(", ")}
           </p>

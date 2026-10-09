@@ -22,14 +22,14 @@ type ButtonLinkProps = CommonProps &
 
 const variants: Record<NonNullable<CommonProps["variant"]>, string> = {
   primary:
-    "bg-accent text-accent-foreground hover:bg-accent/90 shadow-sm shadow-black/10 dark:shadow-black/30",
+    "bg-accent text-accent-foreground hover:brightness-110",
   secondary:
-    "bg-secondary text-primary hover:bg-secondary/80 border border-border/80",
-  ghost: "text-secondary hover:bg-secondary/70 hover:text-primary",
+    "bg-transparent text-primary border border-border hover:border-signal/50 hover:bg-signal-soft",
+  ghost: "text-secondary hover:bg-signal-soft hover:text-primary",
 };
 
 const sizes: Record<NonNullable<CommonProps["size"]>, string> = {
-  sm: "h-9 px-3 text-sm",
+  sm: "h-9 px-3.5 text-sm",
   md: "h-11 px-4 text-sm",
   lg: "h-12 px-5 text-base",
 };
@@ -43,7 +43,7 @@ export function Button(props: (ButtonBaseProps & { href?: never }) | ButtonLinkP
   })();
 
   const classes = cn(
-    "inline-flex items-center justify-center gap-2 rounded-full font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
+    "inline-flex items-center justify-center gap-2 rounded-lg font-medium tracking-tight transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
     variants[variant ?? "primary"],
     sizes[size ?? "md"],
     className,
@@ -51,7 +51,6 @@ export function Button(props: (ButtonBaseProps & { href?: never }) | ButtonLinkP
 
   if ("href" in props) {
     const linkProps = rest as Omit<ButtonLinkProps, keyof CommonProps>;
-    // Native anchor for file downloads (Next.js Link ignores `download`)
     if (linkProps.download !== undefined) {
       const { download, href, ...anchorRest } = linkProps;
       return (
@@ -82,4 +81,3 @@ export function Button(props: (ButtonBaseProps & { href?: never }) | ButtonLinkP
     </button>
   );
 }
-
