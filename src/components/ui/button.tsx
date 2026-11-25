@@ -21,11 +21,10 @@ type ButtonLinkProps = CommonProps &
   };
 
 const variants: Record<NonNullable<CommonProps["variant"]>, string> = {
-  primary:
-    "bg-accent text-accent-foreground hover:brightness-110",
+  primary: "bg-accent text-accent-foreground hover:opacity-90",
   secondary:
-    "bg-transparent text-primary border border-border hover:border-signal/50 hover:bg-signal-soft",
-  ghost: "text-secondary hover:bg-signal-soft hover:text-primary",
+    "bg-transparent text-primary border border-border hover:bg-secondary",
+  ghost: "text-secondary hover:text-primary hover:bg-secondary",
 };
 
 const sizes: Record<NonNullable<CommonProps["size"]>, string> = {
@@ -36,14 +35,16 @@ const sizes: Record<NonNullable<CommonProps["size"]>, string> = {
 
 export function Button(props: ButtonBaseProps & { href?: never }): React.ReactNode;
 export function Button(props: ButtonLinkProps): React.ReactNode;
-export function Button(props: (ButtonBaseProps & { href?: never }) | ButtonLinkProps) {
+export function Button(
+  props: (ButtonBaseProps & { href?: never }) | ButtonLinkProps,
+) {
   const { variant, size, className, children, rest } = (() => {
     const { variant, size, className, children, ...rest } = props;
     return { variant, size, className, children, rest };
   })();
 
   const classes = cn(
-    "inline-flex items-center justify-center gap-2 rounded-lg font-medium tracking-tight transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
+    "inline-flex items-center justify-center gap-2 rounded-md font-medium tracking-tight transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
     variants[variant ?? "primary"],
     sizes[size ?? "md"],
     className,

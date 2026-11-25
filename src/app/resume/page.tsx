@@ -15,7 +15,7 @@ export default function ResumePage() {
     <div className="min-h-svh bg-[#e8e8ea] print:bg-white">
       <Suspense fallback={null}>
         <DocumentDownloadBar
-          backHref="/#resume"
+          backHref="/#docs"
           backLabel="Back to portfolio"
           pdfHref={profile.resumePdf}
           pdfFileName="Mohammed_Bishir_Full_Stack_Developer.pdf"

@@ -15,7 +15,7 @@ export default function CoverLetterPage() {
     <div className="min-h-svh bg-[#e8e8ea] print:bg-white">
       <Suspense fallback={null}>
         <DocumentDownloadBar
-          backHref="/#cover-letter"
+          backHref="/#docs"
           backLabel="Back to portfolio"
           pdfHref={profile.coverLetterPdf}
           pdfFileName="Mohammed_Bishir_Cover_Letter.pdf"
